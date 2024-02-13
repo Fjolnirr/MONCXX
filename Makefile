@@ -1,12 +1,13 @@
 CXX		  := g++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb
+CXX_FLAGS := -Wall -Wextra -std=c++11 -ggdb
 
 BIN		:= bin
 SRC		:= src/*.cpp $(shell find $(lib) -name *.cpp)
 INCLUDE	:= -Iinclude -Ilib \
  -I/usr/local/include/mongocxx/v_noabi \
- -I/usr/local/include/bsoncxx/v_noabi
-LIB		:= lib
+ -I/usr/local/include/bsoncxx/v_noabi \
+ -I/usr/local/include/bsoncxx/v_noabi/bsoncxx/third_party/mnmlstc
+LIB		:= lib 
 
 LIBRARIES	:= -lpthread -lcrypto \
 -lssl -lmongocxx -lbsoncxx

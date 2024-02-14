@@ -31,6 +31,12 @@ namespace learning
             return true;
         }
 
+        bool add(bsoncxx::builder::basic::document& doc) {
+            mongocxx::collection collection = db[_collectionName];
+            collection.insert_one(doc.view());
+            return true;
+        }
+
     private:
         mongocxx::uri uri;
         mongocxx::client client;

@@ -1,5 +1,5 @@
 CXX		  := g++ -g -O0
-CXX_FLAGS := -Wall -Wextra -std=c++11 -ggdb -g -O0
+CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -g -O0
 
 BIN		:= bin
 SRC		:= src/*.cpp $(shell find $(lib) -name *.cpp)

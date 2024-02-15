@@ -31,9 +31,9 @@ namespace learning
             return true;
         }
 
-        bool add(bsoncxx::builder::basic::document& doc) {
+        bool add(bsoncxx::document::view& doc) {
             mongocxx::collection collection = db[_collectionName];
-            collection.insert_one(doc.view());
+            collection.insert_one(doc);
             return true;
         }
 

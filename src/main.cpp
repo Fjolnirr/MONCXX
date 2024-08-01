@@ -16,7 +16,7 @@ void string2json(json &j, std::string str, std::string value);
 int main() {
     bool result = 0;
     mongocxx::instance instance;
-    learning::MongoDbHandler mongoDbHandler("mongodb://10.41.74.77:27017", "learning_mongocxx", "string2json"); //TODO move this to the constructor later
+    learning::MongoDbHandler mongoDbHandler("mongodb://rootuser:rootpass@10.0.194.77:27017", "learning_mongocxx", "string2json"); //TODO move this to the constructor later
     // basic::document builds a BSON document.
     json j;
     string2json(j, "sys.exec.out.time", "0.65"); 
